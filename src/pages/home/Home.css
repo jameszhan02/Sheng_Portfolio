@@ -93,18 +93,151 @@
 }
 
 
+.projects-sections{
+    margin-top: 80px;
+    width: 65%;
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .project-case{
+    padding-bottom: 5rem;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns:  repeat(12, 1fr);
+    grid-template-rows: minmax(400px, auto);
     align-items: center;
 }
 
+
+.case-higher-layer{
+    z-index: 10;
+}
+
+.case-lower-layer{
+    z-index: 5;
+}
+
 .case-left{
-    grid-column: 1/7;
+    grid-column: 1/8;
     grid-row: 1;
+}
+
+.case-image{
+    height: 100%;
+    border-radius: .7rem;
+    transition: all 0.5s ease-in 0s;
+}
+
+.case-image:hover{
+    background-size: 120%!important;
+}
+
+.case-content{
+    height: 80%;
+    display: flex;
+}
+
+.project-cover-one{
+    background-image: url(../../images/project_cover_one.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-cover-two{
+    background-image: url(../../images/project_cover_two.png);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.project-cover-three{
+    background-image: url(../../images/project_cover_three.png);
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .case-right{
     grid-column: 6/13;
     grid-row: 1;
+}
+
+
+.txt-right{
+    text-align: right;
+}
+
+.project-content{
+    color: #fff;
+}
+
+.project-desc{
+    margin-top: 1.4em;
+    padding: 20px;
+    border-radius: .7rem;
+    background-color: #383838ea;
+}
+
+.left-content{
+    width: 100%;
+    height: 100%;
+}
+
+.right-content{
+    width: 100%;
+    height: 100%;
+}
+
+
+.project-feature{
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: #ffc107;
+}
+
+.project-title{
+    font-size: 22px;
+    letter-spacing: 1.5px;
+}
+
+.project-desc{
+    line-height: 27px;
+    letter-spacing: .3px;
+}
+
+.highlight-content{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.highlight-content:hover{
+    color: #ffc107;
+}
+
+
+.project-stack{
+    padding-top: 1rem;
+    color: gray;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+.project-stack div {
+    display: inline;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.section-title{
+    color: #fff;
+    font-family: monospace;
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding-bottom: 1rem;
 }
