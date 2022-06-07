@@ -34,7 +34,7 @@ function Home() {
             {/* End of intro gretting section */}
             <div className="projects-sections">
                 <div className='project-case'>
-                    
+                    <div></div>
                 </div>
             </div>
         </div>
