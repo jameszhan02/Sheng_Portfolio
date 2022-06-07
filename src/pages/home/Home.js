@@ -127,10 +127,10 @@ function Home() {
             {/* End of projects section */}
             <div className="skill-section">
                 <div className="skill-left">
-
+                        
                 </div>
                 <div id="tag-cloud" className="skill-right">
-                        
+                    
                 </div>
             </div>
             <Footer></Footer>
