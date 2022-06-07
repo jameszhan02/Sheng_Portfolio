@@ -6,23 +6,20 @@ function Navbar() {
             <div className="my-name">
                 Sheng Zhan
             </div>
-            <ul>
-                <li>
-                    Home
-                </li>
-                <li>
-                    About
-                </li>
-                <li>
-                    Skill
-                </li>
+            {/* <ul>
                 <li>
                     Projects
                 </li>
                 <li>
+                    Skills
+                </li>
+                <li>
+                    Education
+                </li>
+                <li>
                     Contact Me
                 </li>
-            </ul>
+            </ul> */}
         </div>
     )
 }
