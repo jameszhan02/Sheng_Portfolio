@@ -15,6 +15,7 @@
 }
 
 
+
 .chalk-txt{
     position:absolute;
     left: 160px;
@@ -32,7 +33,7 @@
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 65px;
+    margin-top: 4rem;
     margin-bottom: 25px;
     position: relative;
 }
@@ -240,4 +241,31 @@
     letter-spacing: 3px;
     font-weight: 600;
     padding-bottom: 1rem;
+}
+
+
+
+
+@media screen and (max-width: 650px){
+    .mobile-chalk-txt{
+        background-image: url(../../images/chalk_txt_mobile.png) ;
+        background-repeat: no-repeat;
+        height: 70px;
+        width: 300px;
+        background-size: cover;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .chalk-txt{
+        display:none;
+    }
+
+    .intro-section{
+        width: 95%;
+    }
+
+    .avator-card{
+        margin-top: 1rem;
+    }
 }

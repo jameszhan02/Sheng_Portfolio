@@ -20,9 +20,9 @@ function Home() {
         <div className="home-container">
             <Navbar></Navbar>
             <div className='intro-section'>
+                 <div className="mobile-chalk-txt"/>
                 <div className='avator-card'>
-                    <div className="chalk-txt">
-                    </div>
+                    <div className="chalk-txt"/>
                     <div className='the-card'>
                         <div className="card-front"></div>
                         <div className="card-back"></div>
