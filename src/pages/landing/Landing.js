@@ -20,7 +20,7 @@ function Landing() {
 
     return (
         <div className="landing-container">
-            <div className="loader-txt">Sheng is Working</div>
+            <div className="loader-txt">Sheng is Building</div>
             <ProgressBar variant="warning" style={{width:"300px"}} animated now={progressBar} />
         </div>
     )
