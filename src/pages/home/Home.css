@@ -97,7 +97,7 @@
 .projects-sections{
     margin-top: 80px;
     width: 65%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -243,6 +243,52 @@
     padding-bottom: 1rem;
 }
 
+.skill-section{
+    /* width: 80%; */
+    width: 65%;
+    max-width: 1100px;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3rem;
+}
+
+.skill-section-row{
+    display: flex;
+    gap: 3rem;
+}
+
+.skill-left{
+    width: 50%;
+    padding-top: 2rem;
+    font-size: 22px;
+    color: #fff;
+    line-height: 35px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.skill-left div{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.skill-right{
+    width: 50%;
+}
+
+.tagcloud{
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+
 
 
 
@@ -268,4 +314,5 @@
     .avator-card{
         margin-top: 1rem;
     }
+
 }

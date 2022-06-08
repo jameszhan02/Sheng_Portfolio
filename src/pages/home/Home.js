@@ -8,21 +8,40 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 
+//for tag cloud import
+import TagCloud from 'TagCloud';
+
 
 function Home() {
-    useEffect(()=>{
+    const cloudContainerId = ".skill-right";
+    const cloudTxt = ['Node', 'Java', 'React', 'React Native', 'Angular', 'Flutter', 'Vue', 'Database Design', 'Express', 'CSS', 'HTML', 'JavaScript'];
+    const cloudOptions = {
+        radius: 300,
+        maxSpeed: 'nomal',
+        initSpeed: 'nomal',
+        direction: 135,
+        keep: true
+    };
+
+
+    useEffect(() => {
+        console.log('use effect fire once!');
         Aos.init({
             duration: 2000,
             once: true
         });
-    })
+        const cloud = TagCloud(cloudContainerId, cloudTxt, cloudOptions);
+        return () => {
+            cloud.destroy();
+        };
+    }, [])
     return (
         <div className="home-container">
             <Navbar></Navbar>
             <div className='intro-section'>
-                 <div className="mobile-chalk-txt"/>
+                <div className="mobile-chalk-txt" />
                 <div className='avator-card'>
-                    <div className="chalk-txt"/>
+                    <div className="chalk-txt" />
                     <div className='the-card'>
                         <div className="card-front"></div>
                         <div className="card-back"></div>
@@ -125,12 +144,19 @@ function Home() {
                 {/* End of project Three Case */}
             </div>
             {/* End of projects section */}
-            <div className="skill-section">
-                <div className="skill-left">
-                        
-                </div>
-                <div id="tag-cloud" className="skill-right">
-                    
+            <div data-aos="fade-in" className="skill-section">
+                <div className='section-title'>All About Me</div>
+                <div className='skill-section-row'>
+                    <div className="skill-left">
+                        <div>
+                            <p>I enjoy createing things that live on the internet since my college time, after graduate I set a goal for myself to grow up and become a Full-Stack developer in a near futrue. </p>
+                            <p>Fast-forward to today, and I have had the privilege of working at a start-up, and a medium-sized corporation. My main focus these days is Front End Developing, implement well-design UI and new functions to the applications.</p>
+                            <p>Time to time, my friends and I also doing some projects for small businesses who need a website or Application to support for their works.</p>
+                        </div>
+                    </div>
+                    <div id="tag-cloud" className="skill-right">
+
+                    </div>
                 </div>
             </div>
             <Footer></Footer>
