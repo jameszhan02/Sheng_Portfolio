@@ -6,13 +6,70 @@ import Typical from 'react-typical';
 //for animation -_- quick set up
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 //for tag cloud import
 import TagCloud from 'TagCloud';
 
 
 function Home() {
+    //create ref for select element and highlight anime
+    const highlightRef = useRef(null);
+
+    // control work experience show/display and hidden
+    const titleOne = useRef(null);
+    const titleTwo = useRef(null);
+    const titleThree = useRef(null);
+    const titleFour = useRef(null);
+
+    const workDesc1 = useRef(null);
+    const workDesc2 = useRef(null);
+    const workDesc3 = useRef(null);
+    const workDesc4 = useRef(null);
+
+
+    const highlightMe = (e) => {
+        //clean up other colors
+        titleOne.current.style.color = "rgb(187, 187, 187)";
+        titleTwo.current.style.color = "rgb(187, 187, 187)";
+        titleThree.current.style.color = "rgb(187, 187, 187)";
+        titleFour.current.style.color = "rgb(187, 187, 187)";
+        // ---
+        highlightRef.current.style.top = e.currentTarget.offsetTop + "px";
+        highlightRef.current.style.height = e.currentTarget.offsetHeight + "px";
+        e.currentTarget.style.color = "#ffc107";
+
+        //show/hide content
+        switch(e.currentTarget.id){
+            case 'work1':
+                console.log(workDesc1.current.className);
+                workDesc1.current.className = "experience";
+                workDesc2.current.className = "experience hidden-flag";
+                workDesc3.current.className = "experience hidden-flag";
+                workDesc4.current.className = "experience hidden-flag";
+                break;
+            case 'work2':
+                workDesc1.current.className = "experience hidden-flag";
+                workDesc2.current.className = "experience";
+                workDesc3.current.className = "experience hidden-flag";
+                workDesc4.current.className = "experience hidden-flag";
+                break;
+            case 'work3':
+                workDesc1.current.className = "experience hidden-flag";
+                workDesc2.current.className = "experience hidden-flag";
+                workDesc3.current.className = "experience";
+                workDesc4.current.className = "experience hidden-flag";
+                break;
+            case 'work4':
+                workDesc1.current.className = "experience hidden-flag";
+                workDesc2.current.className = "experience hidden-flag";
+                workDesc3.current.className = "experience hidden-flag";
+                workDesc4.current.className = "experience";
+                break;
+        }
+    }
+
+    //------------------------------------
     const cloudContainerId = ".skill-right";
     const cloudTxt = ['Node', 'Java', 'React', 'React Native', 'Angular', 'Flutter', 'Vue', 'Database Design', 'Express', 'CSS', 'HTML', 'JavaScript'];
     const cloudOptions = {
@@ -23,7 +80,6 @@ function Home() {
         keep: true
     };
 
-
     useEffect(() => {
         console.log('use effect fire once!');
         Aos.init({
@@ -31,6 +87,7 @@ function Home() {
             once: true
         });
         const cloud = TagCloud(cloudContainerId, cloudTxt, cloudOptions);
+        titleOne.current.style.color = "#ffc107";
         return () => {
             cloud.destroy();
         };
@@ -132,7 +189,7 @@ function Home() {
                                 <p>💙💛No Fee was required at the end, since support Ukrine Local Business💙💛.</p>
                                 <p>---------------------</p>
                                 <a className="highlight-content" href="https://gocerdaria.com.ua/" target="_blank">
-                                    <div>Go Daria Gocer</div>
+                                    <div>Visit Daria Gocer</div>
                                 </a>
                             </div>
                             <div className="project-stack">
@@ -159,6 +216,88 @@ function Home() {
                     </div>
                 </div>
             </div>
+            {/* End of introduce myself and skill section */}
+            <div data-aos="fade-in" className="works-section">
+                <div className='section-title'>Where I've Worked</div>
+                <div className='works-container'>
+                    <div className='works-list'>
+                        <div id='high-light' ref={highlightRef}></div>
+                        <div id="work1" onClick={highlightMe} ref={titleOne} className='work-title'>
+                            Nu Stream Realty
+                        </div>
+                        <div id="work2" onClick={highlightMe} ref={titleTwo} className='work-title'>
+                            Peaceful Mall
+                        </div>
+                        <div id="work3" onClick={highlightMe} ref={titleThree} className='work-title'>
+                            AirTnL
+                        </div>
+                        <div id="work4" onClick={highlightMe} ref={titleFour} className='work-title'>
+                            RunTong IOT
+                            {/* Java Developer Co-op <div>@Run Tong IOT Inc.</div> */}
+                        </div>
+                    </div>
+                    <div className='works-content'>
+                        <div className='experience' ref={workDesc1}>
+                            <div className='experience-title'>
+                               Front End Developer <div>@ Nu Stream Realty Inc.</div>
+                            </div>
+                            <div className='time-line'>
+                                June 2022 - Present
+                            </div>
+                            <div className='work-detail'>
+                            <p> - Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis.</p>
+                            <p> - Develop and maintain code for 'JoHome' website and mobile application primarily using React.js, Java, mySql and flutter.</p>
+                            </div>
+                        </div>
+                        <div  className='experience hidden-flag' ref={workDesc2}>
+                            <div className='experience-title'>
+                                Front End Developer <div>@ Peaceful Mall Media Inc.</div>
+                            </div>
+                            <div className='time-line'>
+                                Dec 2021 - May 2022
+                            </div>
+                            <div className='work-detail'>
+                                <p>- Collaborated with a UI/UX desingers, to deveoped Mobile Application 'Peaceful Mall', which widely use in Vancouver for online food ording.</p>
+                                <p>- RestFull APIs developed with basic CRUD functions.</p>
+                                <p>- Worked with different Front End Framework, such as React Native, flutter, React and Vue.js.</p>
+                                <p>- Wroten modern, performant, maintainable code for project.</p>
+                            </div>
+                        </div>
+                        <div className='experience hidden-flag' ref={workDesc3}>
+                            <div className='experience-title'>
+                                Full-Stack Web Developer <div>@ Air Teach and Learn Inc.</div>
+                            </div>
+                            <div className='time-line'>
+                                January  - Dec 2021
+                            </div>
+                            <div className='work-detail'>
+                            <p> - Developded online teaching platform web applications for AirTnl using Angular/Firebase</p>
+                            <p> - Architected and implemented scheduling system in the application, which allow teachers choose their own available time to host their classes </p>
+                               
+                            </div>
+                        </div>
+                        <div className='experience hidden-flag' ref={workDesc4}>
+                            <div className='experience-title'>
+                               Java Developer Co-op <div>@ RunTong IOT Inc.</div>
+                            </div>
+                            <div className='time-line'>
+                                May - Dec 2019
+                            </div>
+                            <div className='work-detail'>
+                                <p> -  Worked on different projects that involve the usage of modern Full Stack Technologies such as Node.js, Express, MongoDB, mySQL, React and Java Spring Boot</p>
+                                <p> -  Got familiar with web application development process, and porgrammers' working environment. </p>
+                                <p> -  Corporated with others as a team </p>
+                                <p> -  Manually tested sites in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* End of Work Experience section */}
+            <div data-aos="fade-in" className="contact-section">
+
+            </div>
+            {/* End of contact me section */}
             <Footer></Footer>
         </div>
     )

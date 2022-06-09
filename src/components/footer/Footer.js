@@ -4,7 +4,7 @@ function Footer() {
     return (
         <div className='footer-wrapper'>
             <div className="auth-info">
-                Designed & Built by Sheng Zhan
+                Designed & Built by Sheng Zhan @2022
             </div>
         </div>
     )
