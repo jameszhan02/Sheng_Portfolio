@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Sheng_Portfolio/static/css/main.0362c908.css",
-    "main.js": "/Sheng_Portfolio/static/js/main.33dd6d73.js",
+    "main.css": "/Sheng_Portfolio/static/css/main.de9660d0.css",
+    "main.js": "/Sheng_Portfolio/static/js/main.a6fb114a.js",
     "static/js/787.d8aaef00.chunk.js": "/Sheng_Portfolio/static/js/787.d8aaef00.chunk.js",
     "static/media/project_cover_two.png": "/Sheng_Portfolio/static/media/project_cover_two.d914adab8a9fc96e7abb.png",
     "static/media/project_cover_three.png": "/Sheng_Portfolio/static/media/project_cover_three.fba2e710c80089bea3f0.png",
@@ -11,12 +11,12 @@
     "static/media/chalk_txt.png": "/Sheng_Portfolio/static/media/chalk_txt.d3eeab575e72405e427c.png",
     "static/media/chalk_txt_mobile.png": "/Sheng_Portfolio/static/media/chalk_txt_mobile.a699ae1ba98fe4df68b4.png",
     "index.html": "/Sheng_Portfolio/index.html",
-    "main.0362c908.css.map": "/Sheng_Portfolio/static/css/main.0362c908.css.map",
-    "main.33dd6d73.js.map": "/Sheng_Portfolio/static/js/main.33dd6d73.js.map",
+    "main.de9660d0.css.map": "/Sheng_Portfolio/static/css/main.de9660d0.css.map",
+    "main.a6fb114a.js.map": "/Sheng_Portfolio/static/js/main.a6fb114a.js.map",
     "787.d8aaef00.chunk.js.map": "/Sheng_Portfolio/static/js/787.d8aaef00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0362c908.css",
-    "static/js/main.33dd6d73.js"
+    "static/css/main.de9660d0.css",
+    "static/js/main.a6fb114a.js"
   ]
 }
