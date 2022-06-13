@@ -384,6 +384,50 @@
 }
 
 
+.contact-section{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 75px;
+}
+
+.contact-title{
+    font-size: 40px;
+    line-height: 100px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.contact-content{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(187, 187, 187);
+    font-size: 22px;
+    padding-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.contact-btn{
+    cursor: pointer;
+    padding: 20px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    border: 2px solid #ffc107;
+    font-size: 21px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    transition: all .5s ease;
+}
+
+.contact-btn:hover{
+    background-color: #dfa701;
+    font-weight: 400;
+    transition: all .5s ease;
+}
+
+
 @media screen and (max-width: 650px) {
     .mobile-chalk-txt {
         background-image: url(../../images/chalk_txt_mobile.png);

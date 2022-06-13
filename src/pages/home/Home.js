@@ -295,7 +295,15 @@ function Home() {
             </div>
             {/* End of Work Experience section */}
             <div data-aos="fade-in" className="contact-section">
-
+                <div className="contact-title">
+                    Get In Touch
+                </div>
+                <div className="contact-content">
+                    Interesting in about me？ No problems, let's getting in touch with e-mail, I will get back to you as soon as possible.
+                </div>
+                <div className='contact-btn'>
+                    Say Hi!
+                </div>
             </div>
             {/* End of contact me section */}
             <Footer></Footer>
