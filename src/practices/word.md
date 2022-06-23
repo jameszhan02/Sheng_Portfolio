@@ -122,3 +122,4 @@
 
 - anxious
     - if you are anxious to do something or anixious that something should happen, you very much want to do it or very muh want it to happen.
+    - if you are anxious, you are nervous or worried about something.
