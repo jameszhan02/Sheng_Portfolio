@@ -1,34 +1,29 @@
-
-.landing-container{
-    font-family:'Lato', sans-serif;
-    font-size: 18px; 
-    line-height: 1.6;
-    background-color: #292929;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    min-height: 100vh;
+.splash-screen-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #292929;
 }
 
-.loader-txt{
-    font-family: 'ZCOOL KuaiLe', cursive;
-    font-size: 40px;
-    color: #fff;
-    margin-bottom: 10px;
+.open-notation {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 90px;
+  color: #fff;
+  position: relative;
+  font-family: impact, fantasy;
 }
 
-.loader-txt::after{
-    content:'\2026';
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: bottom;
-    animation: dots steps(4, end) 2s infinite;
-    width: 0px;
-}
-
-@keyframes dots{
-    to{
-        width: 1.00em;
-    }
+.open-notation-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  font-size: 90px;
+  color: #fff;
+  font-family: impact, fantasy;
 }
