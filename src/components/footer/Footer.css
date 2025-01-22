@@ -1,16 +1,16 @@
-.footer-wrapper{
-    background-color: #3a3a3a;
-    min-height: 250px;
-    position: relative;
+.footer-wrapper {
+  background-color: #0a0a0a;
+  min-height: 250px;
+  position: relative;
 }
 
-.auth-info{
-    position: absolute;
-    text-align:center;
-    color: #fff;
-    bottom: 3px;
-    width: 100%;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 1.5px;
+.auth-info {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  bottom: 3px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
 }

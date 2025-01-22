@@ -1,60 +1,81 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .my-navbar {
-    background-color: #333;
-    color: #fff;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    gap: 2rem;
-
+  background-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 1rem;
+  gap: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: transparent;
+  background-image: radial-gradient(
+    transparent 1px,
+    var(--token-f32baa44-90b8-42a5-8bca-ffba9d95b23a, #0a0a0a) 1px
+  );
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  mask: linear-gradient(rgb(0, 0, 0) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
-.my-name{
-    padding-top: .7rem;
-    padding-bottom: .7rem;
+.my-name {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .my-navbar ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
 }
 
 .my-navbar ul li {
-    font-size: 17px;
-    font-weight: 400;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+  font-size: 17px;
+  font-weight: 400;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .my-navbar ul li:hover {
-    cursor: pointer;
-    color: #ffc107;
-    border-bottom: 1px solid #ffc107;
+  cursor: pointer;
+  color: #ffc107;
+  border-bottom: 1px solid #ffc107;
 }
 
 .selected-item {
-    cursor: pointer;
-    color: #ffc107;
-    border-bottom: 1px solid #ffc107;
+  cursor: pointer;
+  color: #ffc107;
+  border-bottom: 1px solid #ffc107;
 }
 
-
-
 .sticky {
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+.my-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
     width: 100%;
-    z-index: 20;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }

@@ -1,17 +1,15 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
 
-import Home from './pages/home/Home';
-import Landing from './pages/landing/Landing';
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <>
       <div>
         <Routes>
-          <Route path="/" element={<Landing />}></Route>
-          <Route path="/home" element={<Home />}>
-          </Route>
+          <Route path="/" element={<Home />}></Route>
+          {/* <Route path="/home" element={<Home />}></Route> */}
         </Routes>
       </div>
     </>
