@@ -7,12 +7,9 @@ function Navbar() {
       <div className="my-logo">
         <img src={logo} alt="logo" />
       </div>
-      {/* <div className="my-name">Sheng Zhan</div> */}
       <ul>
         <li>Projects</li>
-        <li>Skills</li>
-        <li>Education</li>
-        <li>Contact Me</li>
+        <li>About Me</li>
       </ul>
     </div>
   );
