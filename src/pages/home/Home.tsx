@@ -1,129 +1,179 @@
 import Navbar from '../../components/navbar/Navbar';
 import Footer from '../../components/footer/Footer';
 import './Home.css';
-import Typical from 'react-typical';
-
+import { motion } from "motion/react"
+import Poster from '../../components/poster/poster'
 //for animation -_- quick set up
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect, useRef } from 'react';
-
-//for tag cloud import
-import TagCloud from 'TagCloud';
+import projectOneCover from '../../images/project_cover_one.png'
 
 
 function Home() {
     //create ref for select element and highlight anime
-    const highlightRef = useRef(null);
+    const highlightRef = useRef<HTMLDivElement | null>(null);
 
     // control work experience show/display and hidden
-    const titleOne = useRef(null);
-    const titleTwo = useRef(null);
-    const titleThree = useRef(null);
-    const titleFour = useRef(null);
+    const titleOne = useRef<HTMLDivElement | null>(null);
+    const titleTwo = useRef<HTMLDivElement | null>(null);
+    const titleThree = useRef<HTMLDivElement | null>(null);
+    const titleFour = useRef<HTMLDivElement | null>(null);
 
-    const workDesc1 = useRef(null);
-    const workDesc2 = useRef(null);
-    const workDesc3 = useRef(null);
-    const workDesc4 = useRef(null);
+    const workDesc1 = useRef<HTMLDivElement | null>(null);
+    const workDesc2 = useRef<HTMLDivElement | null>(null);
+    const workDesc3 = useRef<HTMLDivElement | null>(null);
+    const workDesc4 = useRef<HTMLDivElement | null>(null);
 
 
-    const highlightMe = (e) => {
-        //clean up other colors
-        titleOne.current.style.color = "rgb(187, 187, 187)";
-        titleTwo.current.style.color = "rgb(187, 187, 187)";
-        titleThree.current.style.color = "rgb(187, 187, 187)";
-        titleFour.current.style.color = "rgb(187, 187, 187)";
-        // ---
-        highlightRef.current.style.top = e.currentTarget.offsetTop + "px";
-        highlightRef.current.style.height = e.currentTarget.offsetHeight + "px";
-        e.currentTarget.style.color = "#ffc107";
-
-        //show/hide content
-        switch(e.currentTarget.id){
-            case 'work1':
-                console.log(workDesc1.current.className);
-                workDesc1.current.className = "experience";
-                workDesc2.current.className = "experience hidden-flag";
-                workDesc3.current.className = "experience hidden-flag";
-                workDesc4.current.className = "experience hidden-flag";
-                break;
-            case 'work2':
-                workDesc1.current.className = "experience hidden-flag";
-                workDesc2.current.className = "experience";
-                workDesc3.current.className = "experience hidden-flag";
-                workDesc4.current.className = "experience hidden-flag";
-                break;
-            case 'work3':
-                workDesc1.current.className = "experience hidden-flag";
-                workDesc2.current.className = "experience hidden-flag";
-                workDesc3.current.className = "experience";
-                workDesc4.current.className = "experience hidden-flag";
-                break;
-            case 'work4':
-                workDesc1.current.className = "experience hidden-flag";
-                workDesc2.current.className = "experience hidden-flag";
-                workDesc3.current.className = "experience hidden-flag";
-                workDesc4.current.className = "experience";
-                break;
+    const highlightMe = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (titleOne.current) titleOne.current.style.color = "rgb(187, 187, 187)";
+        if (titleTwo.current) titleTwo.current.style.color = "rgb(187, 187, 187)";
+        if (titleThree.current) titleThree.current.style.color = "rgb(187, 187, 187)";
+        if (titleFour.current) titleFour.current.style.color = "rgb(187, 187, 187)";
+        if (highlightRef.current) {
+            highlightRef.current.style.top = e.currentTarget.offsetTop + "px";
+            highlightRef.current.style.height = e.currentTarget.offsetHeight + "px";
         }
+        e.currentTarget.style.color = "#ffc107";
+        if (workDesc1.current && workDesc2.current && workDesc3.current && workDesc4.current) {
+            switch (e.currentTarget.id) {
+                case 'work1':
+                    workDesc1.current.className = "experience";
+                    workDesc2.current.className = "experience hidden-flag";
+                    workDesc3.current.className = "experience hidden-flag";
+                    workDesc4.current.className = "experience hidden-flag";
+                    break;
+                case 'work2':
+                    workDesc1.current.className = "experience hidden-flag";
+                    workDesc2.current.className = "experience";
+                    workDesc3.current.className = "experience hidden-flag";
+                    workDesc4.current.className = "experience hidden-flag";
+                    break;
+                case 'work3':
+                    workDesc1.current.className = "experience hidden-flag";
+                    workDesc2.current.className = "experience hidden-flag";
+                    workDesc3.current.className = "experience";
+                    workDesc4.current.className = "experience hidden-flag";
+                    break;
+                case 'work4':
+                    workDesc1.current.className = "experience hidden-flag";
+                    workDesc2.current.className = "experience hidden-flag";
+                    workDesc3.current.className = "experience hidden-flag";
+                    workDesc4.current.className = "experience";
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 
-    //------------------------------------
-    const cloudContainerId = ".skill-right";
-    const cloudTxt = ['Node', 'Java', 'React', 'React Native', 'Angular', 'Flutter', 'Vue', 'Database Design', 'Express', 'CSS', 'HTML', 'JavaScript'];
-    const cloudOptions = {
-        radius: 300,
-        maxSpeed: 'nomal',
-        initSpeed: 'nomal',
-        direction: 135,
-        keep: true
-    };
-
     useEffect(() => {
-        console.log('use effect fire once!');
-        Aos.init({
-            duration: 2000,
-            once: true
-        });
-        const cloud = TagCloud(cloudContainerId, cloudTxt, cloudOptions);
-        titleOne.current.style.color = "#ffc107";
-        return () => {
-            cloud.destroy();
-        };
+        if (titleOne.current) titleOne.current.style.color = "#ffc107";
     }, [])
+
     return (
         <div className="home-container">
             <Navbar></Navbar>
             <div className='intro-section'>
-                <div className="mobile-chalk-txt" />
-                <div className='avator-card'>
-                    <div className="chalk-txt" />
-                    <div className='the-card'>
-                        <div className="card-front"></div>
-                        <div className="card-back"></div>
+                <div className='intro-part'>
+                    <div className="my-name">I'm Sean</div>
+                    <div className="short-intro">
+                        Full-Stack Developer@NuStream
+                        <br />
+                        I work with React Ecosystem, TypeScript, and backend development.
+                        Thrive on tackling challenges, continuously expanding my skillset,
+                        and delivering innovative solutions in dynamic environments.
+                        Currently pursuing Data Science.
                     </div>
                 </div>
-                <div className="greeting-txt">
-                    <div className="welcome-txt">Nice to meet you here!</div>
-                    <div className="name-txt">I am Sheng Zhan,</div>
-                    <Typical
-                        className="ani-txt"
-                        loop={1}
-                        wrapper="b"
-                        steps={[
-                            'React Native Developer',
-                            2000,
-                            'Full Stack Web Developer',
-                            3000,
-                        ]}
-                    />
+                <div className="intro-part-bg">
+                    <div className="left-place-holder" />
+                    <div className="poster-board">
+                        <motion.div
+                            className="poster-board-col"
+                            animate={{ y: ["0%", "-50%"] }}
+                            transition={{
+                                duration: 15,
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                                ease: "easeInOut"
+                            }}
+                        >
+                            <Poster
+                                posterImgUrl="/images/poster1.jpg"
+                                avatorUrl="/images/avatar1.jpg"
+                                title="Project 1"
+                            />
+                            <Poster
+                                posterImgUrl="/images/poster2.jpg"
+                                avatorUrl="/images/avatar2.jpg"
+                                title="Project 2"
+                            />
+                            <Poster
+                                posterImgUrl="/images/poster3.jpg"
+                                avatorUrl="/images/avatar3.jpg"
+                                title="Project 3"
+                            />
+                        </motion.div>
+                        <motion.div
+                            className="poster-board-col"
+                            animate={{ y: ["-50%", "0%"] }}
+                            transition={{
+                                duration: 15,
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                                ease: "easeInOut"
+                            }}
+                        >
+                            <Poster
+                                posterImgUrl={projectOneCover}
+                                avatorUrl="/images/avatar1.jpg"
+                                title="Project 1"
+                            />
+                            <Poster
+                                posterImgUrl="/images/poster2.jpg"
+                                avatorUrl="/images/avatar2.jpg"
+                                title="Project 2"
+                            />
+                            <Poster
+                                posterImgUrl="/images/poster3.jpg"
+                                avatorUrl="/images/avatar3.jpg"
+                                title="Project 3"
+                            />
+                        </motion.div>
+                        <motion.div
+                            className="poster-board-col"
+                            animate={{ y: ["0%", "-50%"] }}
+                            transition={{
+                                duration: 15,
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                                ease: "easeInOut"
+                            }}
+                        >
+                            <Poster
+                                posterImgUrl="/images/poster1.jpg"
+                                avatorUrl="/images/avatar1.jpg"
+                                title="Project 1"
+                            />
+                            <Poster
+                                posterImgUrl="/images/poster2.jpg"
+                                avatorUrl="/images/avatar2.jpg"
+                                title="Project 2"
+                            />
+                            <Poster
+                                posterImgUrl="/images/poster3.jpg"
+                                avatorUrl="/images/avatar3.jpg"
+                                title="Project 3"
+                            />
+                        </motion.div>
+                    </div>
                 </div>
             </div>
             {/* End of intro gretting section */}
             <div className="projects-sections">
                 <div className='section-title'>Projects</div>
-                <div data-aos="fade-in" className='project-case'>
+                <div className='project-case'>
                     <div className="case-left project-cover-one case-lower-layer case-image">
                     </div>
                     <div className="case-right case-higher-layer case-content">
@@ -148,7 +198,7 @@ function Home() {
                     </div>
                 </div>
                 {/* End of project One Case */}
-                <div data-aos="fade-in" className='project-case'>
+                <div className='project-case'>
                     <div className="case-right project-cover-two case-lower-layer case-image">
                     </div>
                     <div className="case-left case-higher-layer case-content">
@@ -173,7 +223,7 @@ function Home() {
                     </div>
                 </div>
                 {/* End of project Two Case */}
-                <div data-aos="fade-in" className='project-case'>
+                <div className='project-case'>
                     <div className="case-left project-cover-three case-lower-layer case-image">
                     </div>
                     <div className="case-right case-higher-layer case-content">
@@ -188,7 +238,7 @@ function Home() {
                                 A personal Website built for a psychiatrist from Ukraine. Patient are free to sent her email through the website, and to view all information about her, Google Map was also be used.
                                 <p>💙💛No Fee was required at the end, since support Ukrine Local Business💙💛.</p>
                                 <p>---------------------</p>
-                                <a className="highlight-content" href="https://gocerdaria.com.ua/" target="_blank">
+                                <a className="highlight-content" href="https://gocerdaria.com.ua/" target="_blank" rel="noreferrer" >
                                     <div>Visit Daria Gocer</div>
                                 </a>
                             </div>
@@ -201,7 +251,7 @@ function Home() {
                 {/* End of project Three Case */}
             </div>
             {/* End of projects section */}
-            <div data-aos="fade-in" className="skill-section">
+            <div className="skill-section">
                 <div className='section-title'>All About Me</div>
                 <div className='skill-section-row'>
                     <div className="skill-left">
@@ -217,7 +267,7 @@ function Home() {
                 </div>
             </div>
             {/* End of introduce myself and skill section */}
-            <div data-aos="fade-in" className="works-section">
+            <div className="works-section">
                 <div className='section-title'>Where I've Worked</div>
                 <div className='works-container'>
                     <div className='works-list'>
@@ -239,17 +289,17 @@ function Home() {
                     <div className='works-content'>
                         <div className='experience' ref={workDesc1}>
                             <div className='experience-title'>
-                               Front End Developer <div>@ Nu Stream Realty Inc.</div>
+                                Front End Developer <div>@ Nu Stream Realty Inc.</div>
                             </div>
                             <div className='time-line'>
                                 June 2022 - Present
                             </div>
                             <div className='work-detail'>
-                            <p> - Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis.</p>
-                            <p> - Develop and maintain code for 'JoHome' website and mobile application primarily using React.js, Java, mySql and flutter.</p>
+                                <p> - Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis.</p>
+                                <p> - Develop and maintain code for 'JoHome' website and mobile application primarily using React.js, Java, mySql and flutter.</p>
                             </div>
                         </div>
-                        <div  className='experience hidden-flag' ref={workDesc2}>
+                        <div className='experience hidden-flag' ref={workDesc2}>
                             <div className='experience-title'>
                                 Front End Developer <div>@ Peaceful Mall Media Inc.</div>
                             </div>
@@ -271,14 +321,14 @@ function Home() {
                                 January  - Dec 2021
                             </div>
                             <div className='work-detail'>
-                            <p> - Developded online teaching platform web applications for AirTnl using Angular/Firebase</p>
-                            <p> - Architected and implemented scheduling system in the application, which allow teachers choose their own available time to host their classes </p>
-                               
+                                <p> - Developded online teaching platform web applications for AirTnl using Angular/Firebase</p>
+                                <p> - Architected and implemented scheduling system in the application, which allow teachers choose their own available time to host their classes </p>
+
                             </div>
                         </div>
                         <div className='experience hidden-flag' ref={workDesc4}>
                             <div className='experience-title'>
-                               Java Developer Co-op <div>@ RunTong IOT Inc.</div>
+                                Java Developer Co-op <div>@ RunTong IOT Inc.</div>
                             </div>
                             <div className='time-line'>
                                 May - Dec 2019
@@ -294,7 +344,7 @@ function Home() {
                 </div>
             </div>
             {/* End of Work Experience section */}
-            <div data-aos="fade-in" className="contact-section">
+            <div className="contact-section">
                 <div className="contact-title">
                     Get In Touch
                 </div>

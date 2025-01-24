@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.posterArea {
+    height: 250px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.titleCardArea {
+    width: 100%;
+    display: flex;
+}
+
+.cardAvator {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cardTitle {
+    font-size: 18;
+    color: #fff;
+}
+
+.images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.posterImage {
+    transition: transform 1s ease-in-out;
+}
+
+.posterImage:hover {
+    transform: translateY(-8px) scale(1.05);
+    cursor: pointer;
+}

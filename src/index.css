@@ -16,17 +16,24 @@ code {
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
+  border-radius: 20px;
 }
+
 ::-webkit-scrollbar-track {
   background: #0a0a0a;
+  border-radius: 20px;
+
 }
+
 ::-webkit-scrollbar-thumb {
   background: #ebebeb;
-  border-radius: 4px;
+  border-radius: 20px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #2a2a2a;
 }
+
 /* For Firefox Scrollbar */
 * {
   scrollbar-width: thin;
