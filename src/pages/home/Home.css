@@ -16,7 +16,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex
+  display: flex;
 }
 
 .left-place-holder {
@@ -24,26 +24,43 @@
 }
 
 .poster-board {
+  min-height: 550px;
   flex: 3;
   transform: perspective(1200px) rotate(9deg) rotateX(12deg) rotateY(-30deg);
-  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
-  -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
   display: flex;
   gap: 8px;
 }
 
 .poster-board-col {
-  flex: 1
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .my-name {
   color: #fff;
   font-size: 68px;
   font-weight: bold;
+  padding-top: 30px;
 }
 
 .short-intro {
-  color: #C7CBC9;
+  color: #c7cbc9;
   font-weight: 600;
   font-size: 18px;
   max-width: 470px;
@@ -51,8 +68,9 @@
 
 .intro-part {
   flex: 1;
+  max-width: 1200px;
+  margin: auto;
 }
-
 
 .ani-txt {
   color: #fff;
@@ -60,7 +78,6 @@
   font-weight: 400;
   letter-spacing: 2px;
 }
-
 
 .chalk-txt {
   position: absolute;
