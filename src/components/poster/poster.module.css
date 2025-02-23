@@ -45,5 +45,4 @@
 
 .posterImage:hover {
     transform: translateY(-8px) scale(1.05);
-    cursor: pointer;
 }
