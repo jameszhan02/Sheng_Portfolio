@@ -27,22 +27,19 @@
   min-height: 550px;
   flex: 3;
   transform: perspective(1200px) rotate(9deg) rotateX(12deg) rotateY(-30deg);
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    black 15%,
-    black 85%,
-    transparent
-  );
+  mask-image: linear-gradient(to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent);
+  -webkit-mask-image: linear-gradient(to bottom,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent);
   display: flex;
   gap: 8px;
+  overflow: hidden;
 }
 
 .poster-board-col {
