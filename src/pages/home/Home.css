@@ -24,7 +24,7 @@
 }
 
 .poster-board {
-  min-height: 550px;
+  min-height: 500px;
   flex: 3;
   transform: perspective(1200px) rotate(9deg) rotateX(12deg) rotateY(-30deg);
   mask-image: linear-gradient(to bottom,
@@ -159,6 +159,10 @@
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.intro-section-space {
+  padding-top: 270px;
 }
 
 .project-case {

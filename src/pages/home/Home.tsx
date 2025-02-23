@@ -20,7 +20,7 @@ import JohomeProSplash from "../../images/johomepro_splash.jpg";
 import newStreamHome from "../../images/nustream_home.jpg";
 import newStreamLogo from "../../images/nustream_logo.jpg";
 import projectOneCover from "../../images/project_cover_one.png";
-
+import ArrowSVGIcon from "../../images/svg/ArrowSVG"
 function Home() {
     //create ref for select element and highlight anime
     const highlightRef = useRef<HTMLDivElement | null>(null);
@@ -187,115 +187,21 @@ function Home() {
                 </div>
             </div>
             {/* End of intro gretting section */}
-            <div className="projects-sections">
-                <div className="section-title">Projects</div>
-                {/* <div className="project-case">
-          <div className="case-left project-cover-one case-lower-layer case-image"></div>
-          <div className="case-right case-higher-layer case-content">
-            <div className="project-content  txt-right">
-              <div className="project-feature">Web Application</div>
-              <div className="project-title">Air Teach And Learn</div>
-              <div className="project-desc">
-                A Online Teaching platform built by Angular and Firebase, With
-                features like Searhing Classes, Online Payment, and Scheduling
-                System etc.
-                <p>---------------------</p>
-                <a className="highlight-content" href="https://www.airtnl.com">
-                  <div> Available on AirTnl</div>
-                </a>
-              </div>
-              <div className="project-stack">
-                Node <div>|</div> Firebase <div>|</div> Angular
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="project-case">
-          <div className="case-right project-cover-two case-lower-layer case-image"></div>
-          <div className="case-left case-higher-layer case-content">
-            <div className="project-content">
-              <div className="project-feature">Mobile Application</div>
-              <div className="project-title">PeaceFul Mall</div>
-              <div className="project-desc">
-                A Food Delivery platform power by React Native, have complete
-                promotion and payment System, also driver managing system.
-                Available on both App Store and Google Play Store.
-                <p>---------------------</p>
-                <a
-                  className="highlight-content"
-                  href="https://play.google.com/store/apps/details?id=com.peacefulmall.app&gl=US"
-                >
-                  <div> Peaceful Mall </div>
-                </a>
-              </div>
-              <div className="project-stack">
-                React Native <div>|</div> Node <div>|</div> PHP <div>|</div>{" "}
-                Redux
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="project-case">
-          <div className="case-left project-cover-three case-lower-layer case-image"></div>
-          <div className="case-right case-higher-layer case-content">
-            <div className="project-content  txt-right">
-              <div className="project-feature">Personal Website</div>
-              <div className="project-title">Daria Gocer</div>
-              <div className="project-desc">
-                A personal Website built for a psychiatrist from Ukraine.
-                Patient are free to sent her email through the website, and to
-                view all information about her, Google Map was also be used.
-                <p>
-                  💙💛No Fee was required at the end, since support Ukrine Local
-                  Business💙💛.
-                </p>
-                <p>---------------------</p>
-                <a
-                  className="highlight-content"
-                  href="https://gocerdaria.com.ua/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <div>Visit Daria Gocer</div>
-                </a>
-              </div>
-              <div className="project-stack">
-                React <div>|</div> Firebase <div>|</div> Google Map
-              </div>
-            </div>
-          </div>
-        </div> */}
-                {/* End of project Three Case */}
-            </div>
-            {/* End of projects section */}
-            <div className="skill-section">
-                <div className="section-title">All About Me</div>
-                <div className="skill-section-row">
-                    <div className="skill-left">
-                        <div>
-                            <p>
-                                I enjoy createing things that live on the internet since my
-                                college time, after graduate I set a goal for myself to grow up
-                                and become a Full-Stack developer in a near futrue.{" "}
-                            </p>
-                            <p>
-                                Fast-forward to today, and I have had the privilege of working
-                                at a start-up, and a medium-sized corporation. My main focus
-                                these days is Front End Developing, implement well-design UI and
-                                new functions to the applications.
-                            </p>
-                            <p>
-                                Time to time, my friends and I also doing some projects for
-                                small businesses who need a website or Application to support
-                                for their works.
-                            </p>
-                        </div>
-                    </div>
-                    <div id="tag-cloud" className="skill-right"></div>
-                </div>
-            </div>
-            {/* End of introduce myself and skill section */}
-            <div className="works-section">
+            <div className="intro-section-space " />
+            <motion.div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                }}
+                animate={{ y: [0, 10, 0] }}
+                transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                }}
+            >
+                <ArrowSVGIcon />
+            </motion.div>            <div className="works-section">
                 <div className="section-title">Where I've Worked</div>
                 <div className="works-container">
                     <div className="works-list">
@@ -422,6 +328,35 @@ function Home() {
                 </div>
             </div>
             {/* End of Work Experience section */}
+            {/* End of projects section */}
+            <div className="skill-section">
+                <div className="section-title">All About Me</div>
+                <div className="skill-section-row">
+                    <div className="skill-left">
+                        <div>
+                            <p>
+                                I enjoy createing things that live on the internet since my
+                                college time, after graduate I set a goal for myself to grow up
+                                and become a Full-Stack developer in a near futrue.{" "}
+                            </p>
+                            <p>
+                                Fast-forward to today, and I have had the privilege of working
+                                at a start-up, and a medium-sized corporation. My main focus
+                                these days is Front End Developing, implement well-design UI and
+                                new functions to the applications.
+                            </p>
+                            <p>
+                                Time to time, my friends and I also doing some projects for
+                                small businesses who need a website or Application to support
+                                for their works.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="tag-cloud" className="skill-right"></div>
+                </div>
+            </div>
+            {/* End of introduce myself and skill section */}
+
             <div className="contact-section">
                 <div className="contact-title">Get In Touch</div>
                 <div className="contact-content">
