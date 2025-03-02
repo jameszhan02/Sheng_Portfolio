@@ -93,96 +93,103 @@ function Home() {
             <Navbar></Navbar>
             <div className="intro-section">
                 <div className="intro-part">
-                    <div className="my-name">I'm Sean</div>
-                    <div className="short-intro">
-                        Full-Stack Developer@NuStream
-                        <br />I work with React Ecosystem, TypeScript, and backend
-                        development. Thrive on tackling challenges, continuously expanding
-                        my skillset, and delivering innovative solutions in dynamic
-                        environments. Currently pursuing Data Science.
+                    <div className="intro-part-col-left">
+                        <div className="my-name">I'm Sean</div>
+                        <div className="short-intro">
+                            Full-Stack Developer@NuStream
+                            <br />I work with React Ecosystem, TypeScript, and backend
+                            development. Thrive on tackling challenges, continuously expanding
+                            my skillset, and delivering innovative solutions in dynamic
+                            environments. Currently pursuing Data Science.
+                        </div>
                     </div>
+                    <div className="intro-part-col-right" />
                 </div>
                 <div className="intro-part-bg">
-                    <div className="left-place-holder" />
-                    <div className="poster-board">
-                        <motion.div
-                            className="poster-board-col"
-                            animate={{ y: ["0%", "-120%"] }}
-                            transition={{
-                                duration: 30,
-                                repeat: Infinity,
-                                repeatType: "reverse",
-                                ease: "easeInOut",
-                            }}
-                        >
-                            <Poster
-                                posterImgUrl={canovo_home}
-                                avatorUrl={canovo_logo}
-                                title="Canovo"
-                            />
-                            <Poster
-                                posterImgUrl={newStreamHome}
-                                avatorUrl={newStreamLogo}
-                                title="NuStream Realty"
-                            />
-                            <Poster
-                                posterImgUrl={peacefulMallHomePage}
-                                avatorUrl={peacefulMallIcon}
-                                title="Peaceful Mall"
-                            />
-                        </motion.div>
-                        <motion.div
-                            className="poster-board-col"
-                            animate={{ y: ["-120%", "0%"] }}
-                            transition={{
-                                duration: 30,
-                                repeat: Infinity,
-                                repeatType: "reverse",
-                                ease: "easeInOut",
-                            }}
-                        >
-                            <Poster
-                                posterImgUrl={projectOneCover}
-                                avatorUrl={airTnlLogo}
-                                title="Air Teach And Learn"
-                            />
-                            <Poster
-                                posterImgUrl={JohomeProSplash}
-                                avatorUrl={joLogo}
-                                title="JoHome"
-                            />
-                            <Poster
-                                posterImgUrl={JohomeProHome}
-                                avatorUrl={joLogo}
-                                title="JoHomePro"
-                            />
-                        </motion.div>
-                        <motion.div
-                            className="poster-board-col"
-                            animate={{ y: ["0%", "-120%"] }}
-                            transition={{
-                                duration: 30,
-                                repeat: Infinity,
-                                repeatType: "reverse",
-                                ease: "easeInOut",
-                            }}
-                        >
-                            <Poster
-                                posterImgUrl={peacefulMall_food_deliver}
-                                avatorUrl={peacefulMallIcon}
-                                title="PeaceFul Food Delivery"
-                            />
-                            <Poster
-                                posterImgUrl={navoaPJ1}
-                                avatorUrl={novaInteractionLogo}
-                                title="Power Career"
-                            />
-                            <Poster
-                                posterImgUrl={manoir}
-                                avatorUrl={novaInteractionLogo}
-                                title="Manoir"
-                            />
-                        </motion.div>
+                    <div className="intro-part-bg-inner">
+                        <div className="intro-part-bg-inner-col-left" />
+                        <div className="intro-part-bg-inner-col-right">
+                            <div className="poster-board">
+                                <motion.div
+                                    className="poster-board-col"
+                                    animate={{ y: ["0%", "-120%"] }}
+                                    transition={{
+                                        duration: 30,
+                                        repeat: Infinity,
+                                        repeatType: "reverse",
+                                        ease: "easeInOut",
+                                    }}
+                                >
+                                    <Poster
+                                        posterImgUrl={canovo_home}
+                                        avatorUrl={canovo_logo}
+                                        title="Canovo"
+                                    />
+                                    <Poster
+                                        posterImgUrl={newStreamHome}
+                                        avatorUrl={newStreamLogo}
+                                        title="NuStream Realty"
+                                    />
+                                    <Poster
+                                        posterImgUrl={peacefulMallHomePage}
+                                        avatorUrl={peacefulMallIcon}
+                                        title="Peaceful Mall"
+                                    />
+                                </motion.div>
+                                <motion.div
+                                    className="poster-board-col"
+                                    animate={{ y: ["-120%", "0%"] }}
+                                    transition={{
+                                        duration: 30,
+                                        repeat: Infinity,
+                                        repeatType: "reverse",
+                                        ease: "easeInOut",
+                                    }}
+                                >
+                                    <Poster
+                                        posterImgUrl={projectOneCover}
+                                        avatorUrl={airTnlLogo}
+                                        title="Air Teach And Learn"
+                                    />
+                                    <Poster
+                                        posterImgUrl={JohomeProSplash}
+                                        avatorUrl={joLogo}
+                                        title="JoHome"
+                                    />
+                                    <Poster
+                                        posterImgUrl={JohomeProHome}
+                                        avatorUrl={joLogo}
+                                        title="JoHomePro"
+                                    />
+                                </motion.div>
+                                <motion.div
+                                    className="poster-board-col"
+                                    animate={{ y: ["0%", "-120%"] }}
+                                    transition={{
+                                        duration: 30,
+                                        repeat: Infinity,
+                                        repeatType: "reverse",
+                                        ease: "easeInOut",
+                                    }}
+                                >
+                                    <Poster
+                                        posterImgUrl={peacefulMall_food_deliver}
+                                        avatorUrl={peacefulMallIcon}
+                                        title="PeaceFul Food Delivery"
+                                    />
+                                    <Poster
+                                        posterImgUrl={navoaPJ1}
+                                        avatorUrl={novaInteractionLogo}
+                                        title="Power Career"
+                                    />
+                                    <Poster
+                                        posterImgUrl={manoir}
+                                        avatorUrl={novaInteractionLogo}
+                                        title="Manoir"
+                                    />
+                                </motion.div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

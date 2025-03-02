@@ -19,13 +19,34 @@
   display: flex;
 }
 
-.left-place-holder {
+.intro-part-bg-inner {
+  margin: auto;
+  flex: 1;
+  max-width: 1200px;
+  display: flex;
+}
+
+.intro-part-bg-inner-col {
+  flex: 1;
+  display: flex;
+  min-height: 300px;
+  max-height: 400px
+}
+
+.intro-part-bg-inner-col-left {
   flex: 2;
 }
 
+.intro-part-bg-inner-col-right {
+  flex: 3;
+  display: flex;
+  min-height: 350px;
+  max-height: 450px
+}
+
+
 .poster-board {
   min-height: 500px;
-  flex: 3;
   transform: perspective(1200px) rotate(9deg) rotateX(12deg) rotateY(-30deg);
   mask-image: linear-gradient(to bottom,
       transparent,
@@ -67,7 +88,21 @@
   flex: 1;
   max-width: 1200px;
   margin: auto;
+  display: flex;
 }
+
+.intro-part-col {
+  flex: 1
+}
+
+.intro-part-col-left {
+  flex: 2
+}
+
+.intro-part-col-right {
+  flex: 3
+}
+
 
 .ani-txt {
   color: #fff;
@@ -495,9 +530,6 @@
     position: relative;
   }
 
-  .intro-part {
-    flex: 1;
-  }
 
   .avator-card {
     margin-top: 1rem;
