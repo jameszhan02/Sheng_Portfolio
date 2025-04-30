@@ -1,6 +1,7 @@
 .footer-wrapper {
   background-color: #0a0a0a;
   position: relative;
+  padding: 0 50px;
 }
 
 .auth-info {
@@ -20,4 +21,90 @@
 
 .footer-content {
   display: flex;
+  gap: 26px;
+  padding: 50px 0;
+}
+
+.footer-content-col {
+  flex: 1;
+}
+.footer-content-main-col {
+  flex: 2;
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+}
+
+.link-item {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.link-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+}
+.link-item a:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.footer-content-col-title {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.footer-content-col-intro {
+  padding: 10px 0;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  bottom: 140%; /* Position above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(69, 69, 69, 0.8);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0.1;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(69, 69, 69, 0.8) transparent transparent transparent;
+}
+
+.link-item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
