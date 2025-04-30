@@ -1,0 +1,10 @@
+.divider {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    #6b7280,
+    transparent
+  );
+  width: 100%;
+  height: 1px;
+}

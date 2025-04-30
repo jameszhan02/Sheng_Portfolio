@@ -17,6 +17,7 @@
   left: 0;
   right: 0;
   display: flex;
+  pointer-events: none;
 }
 
 .intro-part-bg-inner {
@@ -30,7 +31,7 @@
   flex: 1;
   display: flex;
   min-height: 300px;
-  max-height: 400px
+  max-height: 400px;
 }
 
 .intro-part-bg-inner-col-left {
@@ -41,23 +42,26 @@
   flex: 3;
   display: flex;
   min-height: 350px;
-  max-height: 450px
+  max-height: 450px;
 }
-
 
 .poster-board {
   min-height: 500px;
   transform: perspective(1200px) rotate(9deg) rotateX(12deg) rotateY(-30deg);
-  mask-image: linear-gradient(to bottom,
-      transparent,
-      black 15%,
-      black 85%,
-      transparent);
-  -webkit-mask-image: linear-gradient(to bottom,
-      transparent,
-      black 15%,
-      black 85%,
-      transparent);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
   display: flex;
   gap: 8px;
   overflow: hidden;
@@ -92,17 +96,16 @@
 }
 
 .intro-part-col {
-  flex: 1
+  flex: 1;
 }
 
 .intro-part-col-left {
-  flex: 2
+  flex: 2;
 }
 
 .intro-part-col-right {
-  flex: 3
+  flex: 3;
 }
-
 
 .ani-txt {
   color: #fff;
@@ -509,6 +512,31 @@
   transition: all 0.5s ease;
 }
 
+.splash-nav-row {
+  display: flex;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.splash-nav-btn {
+  padding: 7px 9px;
+  border-radius: 4px;
+  border: 1px solid rgb(168, 168, 168);
+  font-size: 21px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+  color: #f5f5f5;
+  cursor: pointer;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.splash-nav-btn span {
+  opacity: 1;
+}
+
 @media screen and (max-width: 650px) {
   .mobile-chalk-txt {
     background-image: url(../../images/chalk_txt_mobile.png);
@@ -529,7 +557,6 @@
     flex-direction: row;
     position: relative;
   }
-
 
   .avator-card {
     margin-top: 1rem;
