@@ -7,7 +7,9 @@ function Footer() {
       <CoolDivider />
       <div className="footer-content"></div>
       <CoolDivider />
-      <div className="auth-info">Designed & Built by Sheng Zhan @2022</div>
+      <div className="auth-info">
+        Copyright © 2025 Sheng Zhan. All rights reserved.
+      </div>
     </div>
   );
 }
