@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 import Footer from "../../components/footer/Footer";
 import Navbar from "../../components/navbar/Navbar";
 import Poster from "../../components/poster/poster";
+import ExperienceSVG from "../../icons/ExpericenceSVG";
 import "./Home.css";
 //for animation -_- quick set up
-import { useRef } from "react";
 import CoolButton from "../../components/coolbutton/CoolButton";
 import joLogo from "../../images/Johome_logo.jpg";
 import airTnlLogo from "../../images/airtnl_logo.jpg";
@@ -25,7 +25,6 @@ import ArrowSVGIcon from "../../images/svg/ArrowSVG";
 
 function Home() {
   //create ref for select element and highlight anime
-  const highlightRef = useRef<HTMLDivElement | null>(null);
   const NOTION_STUDY_URL =
     "https://www.notion.so/Study-About-All-8be1667835344d458745b9662ce19642";
   const PROTFOLOIO_BASE_URL = "/Sheng_Portfolio";
@@ -161,14 +160,67 @@ function Home() {
       >
         <ArrowSVGIcon />
       </motion.div>
-      <div className="contact-section">
-        <div className="contact-title">Get In Touch</div>
-        <div className="contact-content">
-          Interesting in about me？ No problems, let's getting in touch with
-          e-mail, I will get back to you as soon as possible.
+      <div className="experience-section">
+        <div className="experience-title">
+          <div className="experience-icon">
+            <ExperienceSVG />
+          </div>
+          <div className="experience-title-txt">Experience</div>
         </div>
-        <div className="contact-btn">Say Hi!</div>
+        <div className="experience-content">
+          <div className="experience-content-date">JUNE 2022 — PRESENT</div>
+          <div className="experience-content-detail">
+            <div className="experience-content-detail-title">
+              Full-Stack Developer
+            </div>
+            <div className="company-row">
+              <div className="company-logo">
+                <img src={newStreamLogo} alt="NuStream Realty" />
+              </div>
+              <div className="experience-content-detail-company">
+                <a
+                  href="https://www.nustreamrealty.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  NuStream Realty
+                </a>
+                <div className="company-location"> - Burnaby, BC, Canada</div>
+              </div>
+            </div>
+
+            <div className="experience-content-detail-description">
+              NuStream Realty is a tech-savvy real estate company that really
+              shines with its unique tech edge. As one of Vancouver's biggest
+              real estate players, we're all about creating services that make
+              the economy stronger and transactions smoother. We want our agents
+              to spend more time with their clients and less time on paperwork.
+            </div>
+            <div className="experience-content-detail-bullets">
+              <ul>
+                <li>
+                  Developed and maintained a full-stack web application using
+                  React, TypeScript, and Node.js.
+                </li>
+                <li>
+                  Developed and maintained a full-stack web application using
+                  React, TypeScript, and Node.js.
+                </li>
+                <li>
+                  Developed and maintained a full-stack web application using
+                  React, TypeScript, and Node.js.
+                </li>
+                <li>
+                  Developed and maintained a full-stack web application using
+                  React, TypeScript, and Node.js.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+      <br />
+      <br />
       {/* End of contact me section */}
       <Footer></Footer>
     </div>

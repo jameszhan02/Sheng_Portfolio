@@ -434,23 +434,12 @@
   border-radius: 4px;
 }
 
-.experience-title {
-  font-size: 21px;
-  font-weight: 500;
-  letter-spacing: 2px;
-}
-
 .time-line {
   padding-top: 5px;
   color: rgb(187, 187, 187);
   font-size: 17px;
   font-weight: 400;
   letter-spacing: 2px;
-}
-
-.experience-title div {
-  display: inline;
-  color: #ffc107;
 }
 
 .hidden-flag {
@@ -535,6 +524,120 @@
 
 .splash-nav-btn span {
   opacity: 1;
+}
+
+.experience-section {
+  padding: 0 50px;
+  margin-top: 80px;
+}
+
+.experience-title {
+  display: flex;
+  gap: 15px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience-title-txt {
+  font-size: 21px;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  margin: auto;
+}
+
+.experience-icon {
+  display: flex;
+  width: fit-content;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  color: #fff;
+  opacity: 0.6;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgba(34, 34, 34, 0.5); /* Semi-transparent background */
+  border: 1px solid #333;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+.experience-content {
+  display: flex;
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.experience-content-date {
+  color: #fff;
+  opacity: 0.6;
+  flex: 2;
+}
+.experience-content-detail {
+  flex: 5;
+}
+.experience-content-detail-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  font-weight: 700;
+  margin: auto;
+}
+
+.company-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.company-logo {
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.experience-content-detail-company {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.9;
+  display: flex;
+}
+
+.experience-content-detail-company a {
+  color: #fff;
+  opacity: 1;
+}
+
+.company-location {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.experience-content-detail-description {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.experience-content-detail-bullets {
+  margin-top: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 650px) {
