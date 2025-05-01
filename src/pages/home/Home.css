@@ -563,6 +563,7 @@
   background-color: rgba(34, 34, 34, 0.5); /* Semi-transparent background */
   border: 1px solid #333;
   backdrop-filter: blur(10px); /* Frosted glass effect */
+  transition: all 0.3s ease-in-out;
 }
 
 .experience-content {
@@ -621,6 +622,7 @@
 .experience-content-detail-company a {
   color: #fff;
   opacity: 1;
+  cursor: pointer;
 }
 
 .company-location {
@@ -642,6 +644,11 @@
   font-weight: 400;
   color: #fff;
   opacity: 0.6;
+}
+
+.experience-icon:hover {
+  transform: rotate(10deg);
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 650px) {
