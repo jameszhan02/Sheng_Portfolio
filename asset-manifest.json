@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Sheng_Portfolio/static/css/main.7f33cfba.css",
-    "main.js": "/Sheng_Portfolio/static/js/main.81644c35.js",
+    "main.css": "/Sheng_Portfolio/static/css/main.88c797d2.css",
+    "main.js": "/Sheng_Portfolio/static/js/main.e90e5a58.js",
     "static/js/453.e250d5d5.chunk.js": "/Sheng_Portfolio/static/js/453.e250d5d5.chunk.js",
     "static/media/peacefulmall_homePage.png": "/Sheng_Portfolio/static/media/peacefulmall_homePage.9465e4e74747fbad1542.png",
     "static/media/project_cover_two.png": "/Sheng_Portfolio/static/media/project_cover_two.d914adab8a9fc96e7abb.png",
@@ -16,7 +16,6 @@
     "static/media/pc1-scaled.jpg": "/Sheng_Portfolio/static/media/pc1-scaled.8189cd10eefcebdc681f.jpg",
     "static/media/real_avatar.jpg": "/Sheng_Portfolio/static/media/real_avatar.e4626eade2f21402b84f.jpg",
     "static/media/johomepro_splash.jpg": "/Sheng_Portfolio/static/media/johomepro_splash.c762570601fb30ff3f2d.jpg",
-    "static/media/personal_logo.jpg": "/Sheng_Portfolio/static/media/personal_logo.2eb9d9f57a8d412c6643.jpg",
     "static/media/johomepro_home.jpg": "/Sheng_Portfolio/static/media/johomepro_home.f131e06eff97dd5ece62.jpg",
     "static/media/peacefulMall_icon.webp": "/Sheng_Portfolio/static/media/peacefulMall_icon.420dd3d7827940e39025.webp",
     "static/media/nustream_logo.jpg": "/Sheng_Portfolio/static/media/nustream_logo.96fc6dddc7266890b123.jpg",
@@ -24,12 +23,12 @@
     "static/media/canovo_logo.jpg": "/Sheng_Portfolio/static/media/canovo_logo.0a6ab4bdac0cac7a6307.jpg",
     "static/media/chalk_txt_mobile.png": "/Sheng_Portfolio/static/media/chalk_txt_mobile.a699ae1ba98fe4df68b4.png",
     "index.html": "/Sheng_Portfolio/index.html",
-    "main.7f33cfba.css.map": "/Sheng_Portfolio/static/css/main.7f33cfba.css.map",
-    "main.81644c35.js.map": "/Sheng_Portfolio/static/js/main.81644c35.js.map",
+    "main.88c797d2.css.map": "/Sheng_Portfolio/static/css/main.88c797d2.css.map",
+    "main.e90e5a58.js.map": "/Sheng_Portfolio/static/js/main.e90e5a58.js.map",
     "453.e250d5d5.chunk.js.map": "/Sheng_Portfolio/static/js/453.e250d5d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f33cfba.css",
-    "static/js/main.81644c35.js"
+    "static/css/main.88c797d2.css",
+    "static/js/main.e90e5a58.js"
   ]
 }
