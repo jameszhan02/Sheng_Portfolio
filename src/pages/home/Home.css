@@ -572,6 +572,8 @@
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
+  max-width: 1200px;
+  margin: auto;
 }
 .experience-content-date {
   color: #fff;

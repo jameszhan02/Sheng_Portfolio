@@ -23,6 +23,8 @@
   display: flex;
   gap: 26px;
   padding: 50px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-content-col {
